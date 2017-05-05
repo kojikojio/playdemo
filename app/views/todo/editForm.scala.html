@@ -1,0 +1,30 @@
+@(id: Long, todoForm: Form[Todo], categories : Seq[(String, String)])(implicit messages: Messages)
+
+@import b3.vertical.fieldConstructor
+
+@main {
+<h1>Edit todo</h1>
+
+@b3.form(routes.TodoController.update(id)) {
+  <fieldset>
+    @b3.text(todoForm("text"), '_label -> "Todo text", '_help -> "")
+    @b3.date(todoForm("deadline"), '_label -> "Deadline date", '_help -> "")
+    @b3.select(
+      todoForm("category"),
+      categories,
+      '_label -> "Category", '_default -> "-- Choose a category --",
+      '_showConstraints -> false
+    )
+  </fieldset>
+
+  <div class="actions">
+    <input type="submit" value="Save this todo" class="btn primary"> or
+    <a href="@routes.TodoController.list()" class="btn">Cancel</a>
+  </div>
+}
+
+@b3.form(routes.TodoController.delete(id), 'class -> "topRight") {
+  <input type="submit" value="Delete this todo" class="btn danger">
+}
+
+}

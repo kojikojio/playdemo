@@ -1,0 +1,2 @@
+# Messages
+todos.list.title={0,choice,0#No todos|1#One todo|1<{0,number,integer} todos} found
