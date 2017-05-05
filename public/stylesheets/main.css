@@ -2,7 +2,7 @@ html {
     background: #eee;
 }
 
-header.topbar h1.fill {
+header.topbar {
     background-color: #007FFF;
 }
 
@@ -26,21 +26,21 @@ section#main .topRight {
     top: 70px;
 }
 
-table.computers em {
+table.todos em {
     color: #aaa;
 }
 
-table.computers .col3, table.computers .col4 {
+table.todos .col3, table.todos .col4, table.todos .col5 {
     width: 10%;
     min-width: 100px;
 }
 
-table.computers .col5 {
-    width: 30%;
+table.todos .col6 {
+    width: 20%;
     min-width: 300px;
 }
 
-table.computers .header a {
+table.todos .header a {
 }
 
 #actions {
